@@ -28,7 +28,8 @@
     "ethers": "^6.13.2",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
-    "solc": "^0.8.26"
+    "solidity-coverage": "^0.8.13",
+    "hardhat": "^2.22.9"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
