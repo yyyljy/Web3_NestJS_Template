@@ -3,6 +3,8 @@ pragma solidity ^0.8.0;
 
 contract SimpleStorage {
     uint256 private storedData;
+    string memory memoryString;
+    string storage storageString;
 
     event DataStored(uint256 data);
 

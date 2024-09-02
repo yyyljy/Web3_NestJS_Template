@@ -8,7 +8,7 @@
 
     예외처리 방법
     -> tx hash 저장
-    -> block number 확인
-    -> block finalize 여부 확인
-    -> event와 연관된 후 처리 프로세스 수행
+    -> tx가 포함된 block number 확인
+    -> 해당 block의 finalize 여부 확인
+    -> event와 연관된 후처리 프로세스 수행
     ```
