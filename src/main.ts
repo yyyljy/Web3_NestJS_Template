@@ -9,7 +9,7 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
 
   // cors
-  app.enableCors();
+  app.enableCors(configService.get('server.corsOption'));
 
   // request size limit
   app.use(bodyParser.json({ limit: '100mb' }));
@@ -33,7 +33,6 @@ async function bootstrap() {
       }
     })(),
   );
-
   await app.listen(configService.get('PORT'));
 }
 bootstrap();

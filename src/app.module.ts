@@ -5,12 +5,16 @@ import { ThrottlerModule } from '@nestjs/throttler';
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { ThrottlerGuard } from '@nestjs/throttler';
+import serverConfig from './config/server.config';
+import blockchainConfig from './config/blockchain.config';
+import dbConfig from './config/db.config';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       envFilePath: `./.env.${process.env.NODE_ENV}`,
       isGlobal: true,
+      load: [serverConfig, blockchainConfig, dbConfig],
     }),
     ThrottlerModule.forRoot([
       {
