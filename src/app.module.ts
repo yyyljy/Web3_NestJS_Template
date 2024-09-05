@@ -13,6 +13,7 @@ import dbConfig from '../configurations/db.config';
 import { AuthModule } from './auth/auth.module';
 import { AuthMiddleware } from './auth/auth.middleware';
 import { JwtModule } from '@nestjs/jwt';
+import { BlockchainModule } from './blockchain/blockchain.module';
 
 @Module({
   imports: [
@@ -48,6 +49,7 @@ import { JwtModule } from '@nestjs/jwt';
       }),
     }),
     AuthModule,
+    BlockchainModule,
   ],
   controllers: [AppController, BlockchainController, AuthController],
   providers: [
