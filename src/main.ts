@@ -33,6 +33,11 @@ async function bootstrap() {
       }
     })(),
   );
+
+  // api
+  app.setGlobalPrefix('api/v1');
+
+  // port
   await app.listen(configService.get('PORT'));
 }
 bootstrap();

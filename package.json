@@ -24,13 +24,14 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.2.3",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/jwt": "^10.2.0",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/throttler": "^6.1.1",
     "ethers": "^6.13.2",
+    "hardhat": "^2.22.9",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
-    "solidity-coverage": "^0.8.13",
-    "hardhat": "^2.22.9"
+    "solidity-coverage": "^0.8.13"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.5",
