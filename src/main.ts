@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import * as bodyParser from 'body-parser';
-import { HttpException, HttpStatus } from '@nestjs/common';
+import { HttpException, HttpStatus, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -36,6 +36,9 @@ async function bootstrap() {
 
   // api
   app.setGlobalPrefix('api/v1');
+
+  // validation
+  app.useGlobalPipes(new ValidationPipe());
 
   // port
   await app.listen(configService.get('PORT'));
